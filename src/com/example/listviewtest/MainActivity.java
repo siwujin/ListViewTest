@@ -11,16 +11,15 @@ import android.widget.ListView;
 
 public class MainActivity extends Activity {
     
-    private List<Fruit> fruitList=new ArrayList<Fruit>();//´´½¨Êı¾İ¼¯ºÏ¡£ÀàĞÍÎªFruitĞÍ
+    private List<Fruit> fruitList=new ArrayList<Fruit>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.activity_main);
-	initFruits();//³õÊ¼»¯Ë®¹ûÊı¾İ
-	FruitAdapter adapter=new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);//´´½¨ÊÊÅäÆ÷¶ÔÏó
-	//(ÉÏÏÂÎÄ£¬×ÓÏî²¼¾ÖÎÄ¼şid,×ÓÏîÊı¾İ£©
-	ListView listview=(ListView) findViewById(R.id.list_view);//ÕÒµ½Ö¸¶¨µÄListView
-	listview.setAdapter(adapter);//½«×Ô¶¨ÒåµÄÊÊÅäÆ÷´«µİ¸øÕâ¸öListView
+	initFruits();//æ•°æ®åˆå§‹åŒ–
+	FruitAdapter adapter=new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);//å®šä¹‰é€‚é…å™¨
+	ListView listview=(ListView) findViewById(R.id.list_view);
+	listview.setAdapter(adapter);
     }
     private void initFruits(){
 	Fruit apple=new Fruit("Apple",R.drawable.apple);
